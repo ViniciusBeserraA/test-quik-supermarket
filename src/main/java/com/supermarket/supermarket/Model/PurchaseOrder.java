@@ -12,9 +12,9 @@ public class PurchaseOrder {
     private String orderNumber;
     private String description;
     private Boolean promotionApplication;
-
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
+    private String status;
 
 }

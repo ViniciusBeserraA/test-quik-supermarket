@@ -1,5 +1,5 @@
 package com.supermarket.supermarket.Controller;
-import com.supermarket.supermarket.Service.ProductsService;
+import com.supermarket.supermarket.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/products")
 public class ProductsController {
     @Autowired
-    ProductsService productsService;
+    ProductService productsService;
 
     @GetMapping("/")
     public ResponseEntity<String> list() {
